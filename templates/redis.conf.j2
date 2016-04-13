@@ -1,0 +1,18 @@
+# {{ ansible_managed }}
+
+daemonize yes
+pidfile {{ monsieurbiz_redis_pidfile }}
+port {{ monsieurbiz_redis_port }}
+timeout 10
+loglevel notice
+logfile {{ monsieurbiz_redis_logfile }}
+syslog-enabled no
+databases {{ monsieurbiz_redis_db_count }}
+#save 900 1
+#save 300 10
+#save 60 10000
+rdbcompression no
+maxclients 1000
+maxmemory 512M
+stop-writes-on-bgsave-error no
+

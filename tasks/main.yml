@@ -1,0 +1,28 @@
+---
+# tasks file for monsieurbiz.redis
+
+- name: Install dotdeb key
+  become: yes
+  become_user: root
+  apt_key: url={{ monsieurbiz_redis_repository_key }}
+  tags: redis
+
+- name: Install dotdeb repository
+  become: yes
+  become_user: root
+  apt_repository: repo='{{item}}'
+  with_items: '{{ monsieurbiz_redis_repositories }}'
+  tags: monsieurbiz_redis_tags
+
+- name: Install redis package
+  become: yes
+  become_user: root
+  apt: name=redis-server state=latest
+  tags: monsieurbiz_redis_tags
+
+- name: Update redis configuration
+  become: yes
+  become_user: root
+  template: src=redis.conf.j2 dest=/etc/redis/redis.conf
+  notify: restart redis
+  tags: monsieurbiz_redis_tags

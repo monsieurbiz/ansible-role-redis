@@ -1,0 +1,12 @@
+---
+# defaults file for monsieurbiz.redis
+
+monsieurbiz_redis_tags: [monsieurbiz, redis]
+monsieurbiz_redis_repository_key: "http://www.dotdeb.org/dotdeb.gpg"
+monsieurbiz_redis_repositories:
+  - deb http://packages.dotdeb.org jessie all
+  - deb-src http://packages.dotdeb.org jessie all
+monsieurbiz_redis_pidfile: /var/run/redis/redis-server.pid
+monsieurbiz_redis_db_count: 2
+monsieurbiz_redis_logfile: /var/log/redis/redis-server.log
+monsieurbiz_redis_port: 6379

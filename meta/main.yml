@@ -1,0 +1,21 @@
+galaxy_info:
+  author: Jacques Bodin-Hullin
+  description: |
+    The redis role installs a redis server on the machine.
+  company: Monsieur Biz
+
+  license: MIT
+  issue_tracker_url: https://github.com/monsieurbiz/ansible-role-redis
+  min_ansible_version: 2.0
+  github_branch: master
+
+  platforms:
+  - name: Debian
+    versions:
+      - jessie
+
+  galaxy_tags:
+    - monsieurbiz
+    - redis
+
+dependencies: []

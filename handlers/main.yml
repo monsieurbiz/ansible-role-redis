@@ -1,0 +1,7 @@
+---
+# handlers file for monsieurbiz.redis
+
+- name: restart redis
+  become: yes
+  become_user: root
+  service: name=redis-server state=restarted
