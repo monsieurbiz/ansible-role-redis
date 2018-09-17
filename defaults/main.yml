@@ -4,8 +4,8 @@
 monsieurbiz_redis_tags: [monsieurbiz, redis]
 monsieurbiz_redis_repository_key: "http://www.dotdeb.org/dotdeb.gpg"
 monsieurbiz_redis_repositories:
-  - deb http://packages.dotdeb.org jessie all
-  - deb-src http://packages.dotdeb.org jessie all
+  - deb http://packages.dotdeb.org {{ ansible_distribution_release }} all
+  - deb-src http://packages.dotdeb.org {{ ansible_distribution_release }} all
 monsieurbiz_redis_pidfile: /var/run/redis/redis-server.pid
 monsieurbiz_redis_db_count: 2
 monsieurbiz_redis_logfile: /var/log/redis/redis-server.log
